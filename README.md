@@ -24,6 +24,7 @@ pip install git+https://github.com/openai/whisper.git
 install the ffmpeg using https://github.com/GyanD/codexffmpeg/releases/tag/2025-02-06-git-6da82b4485
 
 
+
 ### **2️⃣ Install Dependencies**
 pip install openai whisper pyaudio keyboard
 
@@ -44,8 +45,15 @@ python process_audio.py
 Converts audio.wav to text.
 Sends text to ChatGPT.
 Saves AI response as chatgpt_response.mp3.
+![لقطة شاشة 2025-02-09 004611](https://github.com/user-attachments/assets/a9430acf-a5cf-4ea1-98e4-3fc576bdff82)
 
 
 ## **3️⃣ Play the AI Response**
 
 click the file ( chatgpt_response.mp3 ) and play 
+
+
+https://github.com/user-attachments/assets/36bbc6ca-5453-477a-b9a2-318ef11f1d27
+
+
+
