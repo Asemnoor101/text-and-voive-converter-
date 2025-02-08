@@ -40,7 +40,10 @@ Press SPACE to start and stop recording.
 Saves as audio.wav.
 
 
-Uploading جارٍ تسجيل الشاشة 2025-02-09 005050.mp4…
+
+https://github.com/user-attachments/assets/2030f868-5db3-4b69-8069-8b2ca15e3fac
+
+
 
 
 
