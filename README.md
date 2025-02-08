@@ -40,6 +40,10 @@ Press SPACE to start and stop recording.
 Saves as audio.wav.
 
 
+Uploading جارٍ تسجيل الشاشة 2025-02-09 005050.mp4…
+
+
+
 ## **2️⃣ Convert to Text & Get AI Response**
 python process_audio.py
 Converts audio.wav to text.
