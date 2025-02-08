@@ -1,0 +1,62 @@
+import os
+import whisper
+import openai
+
+# 🔹 Set your OpenAI API key securely (DO NOT hardcode keys in production)
+openai.api_key =(your Api code here")  # Ensure it's set in your environment
+
+if not openai.api_key:
+    raise ValueError("❌ OpenAI API key is missing. Set it as an environment variable.")
+
+# 🔹 File paths
+audio_path = "C:/Users/Asem Noor/Desktop/audio task/audio.wav"
+transcription_file = "transcription.txt"
+response_audio_file = "chatgpt_response.mp3"
+
+# ✅ Step 1: Load Whisper Model and Transcribe Audio
+print("🔄 Transcribing audio...")
+model = whisper.load_model("small")
+result = model.transcribe(audio_path)
+transcribed_text = result["text"]
+
+# ✅ Save transcription to a text file
+with open(transcription_file, "w", encoding="utf-8") as file:
+    file.write(transcribed_text)
+
+print("\n✅ Transcription Complete! Saved to:", transcription_file)
+print("\n📝 Transcribed Text:")
+print(transcribed_text)
+
+# ✅ Step 2: Send Transcribed Text to ChatGPT and Force It to Repeat
+print("\n🔄 Sending text to ChatGPT...")
+
+try:
+    chat_response = openai.chat.completions.create(
+        model="gpt-3.5-turbo",  # Use "gpt-4" if you have access
+        messages=[
+            {"role": "system", "content": "Repeat exactly what the user says without any modifications."},
+            {"role": "user", "content": transcribed_text}
+        ]
+    )
+
+    chatgpt_reply = chat_response.choices[0].message.content
+    print("\n🤖 ChatGPT's Response:")
+    print(chatgpt_reply)
+
+    # ✅ Step 3: Convert ChatGPT's Response to Speech
+    print("\n🔄 Generating speech from ChatGPT response...")
+
+    response_audio = openai.audio.speech.create(
+        model="tts-1",
+        voice="alloy",  # Available voices: alloy, echo, fable, onyx, nova, shimmer
+        input=chatgpt_reply
+    )
+
+    # ✅ Save the generated speech to an MP3 file
+    response_audio.stream_to_file(response_audio_file)
+
+    print("\n🎧 Audio response saved as:", response_audio_file)
+    print("\n✅ Process complete! Listen to 'chatgpt_response.mp3'.")
+
+except openai.OpenAIError as e:
+    print(f"\n❌ OpenAI API Error: {e}")
