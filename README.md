@@ -16,9 +16,10 @@ This project records **voice input**, converts it to **text**, sends it to **Cha
 
 ## **🛠️ Installation**
 
-### **1️⃣ Clone the Repository**
-
-git clone https://github.com/your-username/your-repo-name.git
+### **1️⃣ download some important library**
+download the whisper library from 
+pip install git+https://github.com/openai/whisper.git 
+install the ffmpeg using https://github.com/GyanD/codexffmpeg/releases/tag/2025-02-06-git-6da82b4485
 
 
 ### **2️⃣ Install Dependencies**
