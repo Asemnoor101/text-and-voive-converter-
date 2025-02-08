@@ -29,7 +29,7 @@ pip install openai whisper pyaudio keyboard
 setx OPENAI_API_KEY "your-api-key-here"    # For Windows
 
 
-🚀 Usage
+##🚀 Usage
 ## **1️⃣ Record Your Voice
 python audio_recording.py
 Press SPACE to start and stop recording.
