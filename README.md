@@ -69,7 +69,7 @@ Saves AI response as chatgpt_response.mp3.
 
 ## **3️⃣ Play the AI Response**
 
-click the file ( chatgpt_response.mp3 ) and play 
+click on the file ( chatgpt_response.mp3 ) and play it
 
 
 https://github.com/user-attachments/assets/36bbc6ca-5453-477a-b9a2-318ef11f1d27
