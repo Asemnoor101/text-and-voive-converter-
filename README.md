@@ -36,8 +36,14 @@ setx OPENAI_API_KEY "your-api-key-here"    # For Windows
 ##**🚀 Usage**
 ## **1️⃣ Record Your Voice**
 python audio_recording.py
+
+
 Press SPACE to start and stop recording.
+
+
 Saves as audio.wav.
+
+
 
 
 
@@ -49,8 +55,14 @@ https://github.com/user-attachments/assets/2030f868-5db3-4b69-8069-8b2ca15e3fac
 
 ## **2️⃣ Convert to Text & Get AI Response**
 python process_audio.py
+
+
 Converts audio.wav to text.
+
+
 Sends text to ChatGPT.
+
+
 Saves AI response as chatgpt_response.mp3.
 ![لقطة شاشة 2025-02-09 004611](https://github.com/user-attachments/assets/a9430acf-a5cf-4ea1-98e4-3fc576bdff82)
 
