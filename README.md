@@ -1,5 +1,4 @@
-📌 README.md (Simple Version)
-markdown
+
 
 # 🎤 Voice Assistant: Speech-to-Text & AI Response 🎧
 
