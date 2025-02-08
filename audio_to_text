@@ -1,0 +1,26 @@
+```
+import whisper
+
+# Load the Whisper model
+model = whisper.load_model("small")  # Use "tiny", "small", "medium", or "large"
+
+# Load audio correctly
+audio_path = "C:/Users/Asem Noor/Desktop/audio task/audio.wav"
+
+# Transcribe the audio
+print("🔄 Transcribing audio... Please wait.")
+result = model.transcribe(audio_path)
+transcribed_text = result["text"]
+
+# Print the transcription
+print("\n✅ Transcription Complete:")
+print(transcribed_text)
+
+# Define the output text file path
+output_file = "transcription.txt"
+
+# Save the transcription to a text file
+with open(output_file, "w", encoding="utf-8") as file:
+    file.write(transcribed_text)
+
+print(f"\n📂 Transcription saved to: {output_file}")
